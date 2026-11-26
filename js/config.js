@@ -3,7 +3,8 @@
 // Use a chave PUBLICÁVEL. Nunca use a chave secreta aqui.
  
 const URL_DO_PROJETO = 'https://qaijwfjfhbwtcoxthyks.supabase.co/';
-const CHAVE_PUBLICAVEL = 'sb_publishable_t4rRMiLLTjoTv2oTHLdWNQ';
+const CHAVE_PUBLICAVEL = 'sb_publishable_t4rRMiLLTjoTv2oTHLdWNQ_GpPYnLJm';
+
  
 // Criamos uma conexão que será usada pelos outros arquivos.
 const banco = window.supabase.createClient(
