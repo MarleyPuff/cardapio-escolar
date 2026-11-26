@@ -8,10 +8,17 @@
 </head>
 <body>
   <header><h1>QR Code do cardápio</h1></header>
+
+  <nav aria-label="Navegação principal" style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; padding:16px;">
+    <a href="login.html" style="display:inline-block; padding:10px 18px; background:#137720; color:#fff; text-decoration:none; border-radius:8px;">Login</a>
+    <a href="admin.html" style="display:inline-block; padding:10px 18px; background:#137720; color:#fff; text-decoration:none; border-radius:8px;">Admin</a>
+    <a href="index.html" style="display:inline-block; padding:10px 18px; background:#137720; color:#fff; text-decoration:none; border-radius:8px;">Página Inicial</a>
+  </nav>
+
   <main>
     <section>
       <p>Este código abrirá a página pública do cardápio.</p>
-      <input id="endereco-site" type="text" readonly>
+      <input id="endereco-site" type="text">
       <button id="gerar" type="button">Gerar QR Code</button>
       <div id="qrcode"></div>
       <p id="mensagem-qrcode" class="mensagem"></p>
