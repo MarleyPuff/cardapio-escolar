@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code do cardápio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><h1>QR Code do cardápio</h1></header>
+  <main>
+    <section>
+      <p>Este código abrirá a página pública do cardápio.</p>
+      <input id="endereco-site" type="text" readonly>
+      <button id="gerar" type="button">Gerar QR Code</button>
+      <div id="qrcode"></div>
+      <p id="mensagem-qrcode" class="mensagem"></p>
+      <a href="index.html">Voltar ao cardápio</a>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/qrcode.js"></script>
+</body>
+</html>

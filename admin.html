@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel da alimentação escolar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Painel administrativo</h1>
+    <button id="sair">Sair</button>
+  </header>
+  <main>
+    <section>
+      <h2>Cardápio de hoje</h2>
+      <p>A data é preenchida automaticamente pelo sistema.</p>
+      <form id="form-cardapio">
+        <label for="cafe">Café da manhã</label>
+        <textarea id="cafe" rows="2"></textarea>
+        <label for="limite-cafe">Horário limite para responder</label>
+        <input id="limite-cafe" type="time" value="07:00" required>
+ 
+        <label for="lanche">Lanche da tarde</label>
+        <textarea id="lanche" rows="2"></textarea>
+        <label for="limite-lanche">Horário limite para responder</label>
+        <input id="limite-lanche" type="time" value="12:00" required>
+ 
+        <label for="almoco">Almoço / jantar</label>
+        <textarea id="almoco" rows="2"></textarea>
+        <label for="limite-almoco">Horário limite para responder</label>
+        <input id="limite-almoco" type="time" value="16:00" required>
+ 
+        <button type="submit">Salvar cardápio de hoje</button>
+      </form>
+      <p id="mensagem-cardapio" class="mensagem"></p>
+    </section>
+ 
+    <section>
+      <h2>Cadastrar estudante</h2>
+      <form id="form-estudante">
+        <label for="novo-ra">RA</label>
+        <input id="novo-ra" type="text" required>
+        <label for="nova-turma">Turma</label>
+        <input id="nova-turma" type="text" required>
+        <button type="submit">Salvar RA</button>
+      </form>
+      <p id="mensagem-estudante" class="mensagem"></p>
+      <div id="lista-estudantes"></div>
+    </section>
+ 
+    <section>
+      <h2>Relatório de intenção de consumo</h2>
+      <p>Os números abaixo são visíveis somente para a equipe autorizada.</p>
+      <button id="atualizar-relatorio" type="button">Atualizar relatório</button>
+      <div id="relatorio"></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

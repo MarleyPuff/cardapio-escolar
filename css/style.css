@@ -1,0 +1,72 @@
+/* Cores iniciais. A equipe pode trocar estes valores depois. */
+:root {
+    --cor-principal: #245b45;
+    --cor-fundo: #f4f7f4;
+    --cor-texto: #222222;
+    --cor-borda: #d7dfd8;
+  }
+   
+  /* Todos os elementos respeitam o tamanho definido. */
+  * { box-sizing: border-box; }
+   
+  /* Aparência geral da página. */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+  }
+   
+  /* Cabeçalho com o nome do sistema. */
+  header {
+    background: var(--cor-principal);
+    color: white;
+    padding: 18px;
+  }
+   
+  /* Mantém o conteúdo centralizado e com espaço nas laterais. */
+  main {
+    width: min(900px, 94%);
+    margin: 24px auto;
+  }
+   
+  /* Cada refeição e cada bloco ficam dentro de um cartão. */
+  section, .cartao {
+    background: white;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+   
+  label { display: block; margin: 10px 0 5px; font-weight: bold; }
+  input, textarea, select {
+    width: 100%; padding: 10px; border: 1px solid var(--cor-borda);
+    border-radius: 5px; font: inherit;
+  }
+   
+  button {
+    padding: 11px 15px; border: 0; border-radius: 5px;
+    background: var(--cor-principal); color: white; cursor: pointer;
+    margin-top: 8px;
+  }
+   
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .mensagem { padding: 10px; margin: 10px 0; border-radius: 5px; background: #eaf2f8; }
+  .oculto { display: none; }
+  .opcoes { display: flex; gap: 18px; flex-wrap: wrap; }
+  .opcoes label { display: inline-flex; align-items: center; gap: 6px; }
+  .opcoes input { width: auto; }
+   
+  /* Barras simples usadas nos relatórios administrativos. */
+  .barra-fundo { background: #e5e7eb; height: 14px; border-radius: 8px; overflow: hidden; }
+  .barra-preenchida { height: 14px; background: var(--cor-principal); }
+  .linha-grafico { margin: 8px 0; }
+  .legenda-grafico { font-size: 13px; margin-bottom: 3px; }
+   
+  @media (max-width: 600px) {
+    header { padding: 12px; }
+    main { width: 96%; }
+    button { width: 100%; }
+  }
+  

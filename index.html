@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Faz a página caber também na tela do celular. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio da Alimentação Escolar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cardápio da Alimentação Escolar</h1>
+    <p>Consulte as refeições oferecidas hoje.</p>
+  </header>
+ 
+  <main>
+    <section>
+      <h2 id="titulo-cardapio">Cardápio de hoje</h2>
+      <p id="data-cardapio">Carregando o cardápio...</p>
+      <div id="lista-refeicoes"></div>
+    </section>
+ 
+    <section id="area-resposta" class="oculto">
+      <h2>Informe sua intenção de consumo</h2>
+      <label for="ra-estudante">Seu RA</label>
+      <input id="ra-estudante" type="text"
+             placeholder="Digite seu RA" required>
+      <p>Escolha SIM ou NÃO para cada refeição disponível.</p>
+      <div id="opcoes-refeicoes"></div>
+      <p id="mensagem" class="mensagem" aria-live="polite"></p>
+    </section>
+ 
+  </main>
+ 
+  <!-- Carrega a biblioteca do Supabase pela internet. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/cardapio.js"></script>
+</body>
+</html>
